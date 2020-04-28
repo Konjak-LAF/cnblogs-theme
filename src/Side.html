@@ -1,0 +1,335 @@
+<!-- 添加公告栏时钟 -->
+<div
+	style="
+		border-top: 1px dashed #ccc;
+		padding: 5px;
+		border-bottom: 1px dashed #ccc;
+		height: 120px;
+	"
+>
+	<div id="clockdiv">
+		<canvas id="dom" width="120" height="120">时钟canvas</canvas>
+	</div>
+</div>
+<script type="text/javascript">
+	/**
+	 * Created by Administrator on 2017/3/28 0028.
+	 * source from siwuxie095
+	 */
+	var canvas = document.getElementById("dom");
+	var context = canvas.getContext("2d");
+	var height = context.canvas.height;
+	var width = context.canvas.width;
+	var r = width / 2;
+	var rem = width / 200;
+	function drawBackground() {
+		context.save();
+		context.translate(r, r);
+		context.beginPath();
+		context.lineWidth = 8 * rem;
+		context.strokeStyle = "#000";
+		context.arc(0, 0, r - 5 * rem, 0, 2 * Math.PI, false);
+		context.stroke();
+		context.closePath();
+		var houseNumble = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2];
+		houseNumble.forEach(function (number, i) {
+			context.textAlign = "center";
+			context.textBaseline = "middle";
+			context.font = 18 * rem + "px Arial";
+			var rad = ((2 * Math.PI) / 12) * i;
+			var x = Math.cos(rad) * (r - 30 * rem);
+			var y = Math.sin(rad) * (r - 30 * rem);
+			context.fillText(number, x, y);
+		});
+		//瀹氫箟鍒诲害
+		for (var i = 0; i < 60; i++) {
+			var rad = ((2 * Math.PI) / 60) * i;
+			var x = Math.cos(rad) * (r - 18 * rem);
+			var y = Math.sin(rad) * (r - 18 * rem);
+			context.beginPath();
+			if (i % 5 == 0) {
+				context.fillStyle = "#000";
+				context.arc(x, y, 2 * rem, 0, 2 * Math.PI);
+			} else {
+				context.fillStyle = "#ccc";
+				context.arc(x, y, 2 * rem, 0, 2 * Math.PI);
+			}
+
+			context.fill();
+			context.closePath();
+		}
+	}
+	function drawHour(hour, minute) {
+		context.save();
+		context.beginPath();
+		context.lineWidth = 6 * rem;
+		context.lineCap = "round";
+		var rad = ((2 * Math.PI) / 12) * hour;
+		var mrad = ((2 * Math.PI) / 12 / 60) * minute;
+		context.rotate(rad + mrad);
+		context.moveTo(0, 10 * rem);
+		context.lineTo(0, -r / 2);
+		context.stroke();
+		context.restore();
+	}
+	function drawMinute(minute) {
+		context.save();
+		context.beginPath();
+		context.lineWidth = 3 * rem;
+		context.lineCap = "round";
+		var rad = ((2 * Math.PI) / 60) * minute;
+		context.rotate(rad);
+		context.moveTo(0, 15 * rem);
+		context.lineTo(0, -r + 34);
+		context.stroke();
+		context.restore();
+	}
+	function drawSecond(second) {
+		context.save();
+		context.beginPath();
+		context.lineWidth = 2 * rem;
+		context.lineCap = "round";
+		context.fillStyle = "red";
+		var rad = ((2 * Math.PI) / 60) * second;
+		context.rotate(rad);
+		context.moveTo(-2, 20);
+		context.lineTo(2, 20);
+		context.lineTo(1, -r + 18);
+		context.lineTo(-1, -r + 18);
+		context.fill();
+		context.restore();
+	}
+	function drawDot() {
+		context.beginPath();
+		context.fillStyle = "#fff";
+		context.arc(0, 0, 4 * rem, 0, 2 * Math.PI, false);
+		context.fill();
+	}
+	function Draw() {
+		context.clearRect(0, 0, width, height);
+		var time = new Date();
+		var hour = time.getHours();
+		var minute = time.getMinutes();
+		var second = time.getSeconds();
+		drawBackground();
+		drawHour(hour, minute);
+		drawMinute(minute);
+		drawSecond(second);
+		drawDot();
+		context.restore();
+	}
+
+	Draw();
+	setInterval(Draw, 1000);
+</script>
+<script type="text/javascript">
+	//以下是锚点JS
+	var a = $(document);
+	a.ready(function () {
+		var b = $("body"),
+			d = "sideToolbar",
+			e = "sideCatalog",
+			f = "sideCatalog-catalog",
+			g = "sideCatalogBtn",
+			h = "sideToolbar-up",
+			i =
+				'<div id="sideToolbar"style="display:none;">\<div class="sideCatalogBg"id="sideCatalog">\<div id="sideCatalog-sidebar">\<div class="sideCatalog-sidebar-top"></div>\<div class="sideCatalog-sidebar-bottom"></div>\</div>\<div id="sideCatalog-catalog">\<ul class="nav"style="width:225px;zoom:1">\</ul>\</div>\</div>\<a href="javascript:void(0);"id="sideCatalogBtn"class="sideCatalogBtnDisable"></a>\</div>',
+			j = "",
+			k = 200,
+			l = 0,
+			m = 0,
+			n = 0,
+			//限制存在个数，如数量过多，则只显示h2，不显示h3
+			//o, p = 13,
+			o,
+			p = 100,
+			q = true,
+			r = true,
+			s = b;
+		if (s.length === 0) {
+			return;
+		}
+		b.append(i);
+		//指定获取目录的范围-------------这一点非常重要，因为每个人指定的范围都不一样，所以这是要修改的地方
+		//o = s.find(':header');
+		o = $("#cnblogs_post_body").find(":header");
+		if (o.length > p) {
+			r = false;
+			var t = s.find("h3");
+			var u = s.find("h5");
+			if (t.length + u.length > p) {
+				q = false;
+			}
+		}
+		o.each(function (t) {
+			var u = $(this),
+				v = u[0];
+
+			var title = u.text();
+			var text = u.text();
+
+			u.attr("id", "autoid-" + l + "-" + m + "-" + n);
+			//if (!u.attr('id')) {
+			//    u.attr('id', 'autoid-' + l + '-' + m + '-' + n)
+			//};
+			if (v.localName === "h1") {
+				l++;
+				m = 0;
+				if (text.length > 14) text = text.substr(0, 20) + "...";
+				j +=
+					"<li><span>" +
+					l +
+					'&nbsp&nbsp</span><a href="#' +
+					u.attr("id") +
+					'" title="' +
+					title +
+					'">' +
+					text +
+					'</a><span class="sideCatalog-dot"></span></li>';
+			} else if (v.localName === "h3") {
+				m++;
+				n = 0;
+				if (q) {
+					if (text.length > 12) text = text.substr(0, 16) + "...";
+					j +=
+						'<li class="h2Offset"><span>' +
+						l +
+						"." +
+						m +
+						'&nbsp&nbsp</span><a href="#' +
+						u.attr("id") +
+						'" title="' +
+						title +
+						'">' +
+						text +
+						"</a></li>";
+				}
+			} else if (v.localName === "h5") {
+				n++;
+				if (r) {
+					j +=
+						'<li class="h3Offset"><span>' +
+						l +
+						"." +
+						m +
+						"." +
+						n +
+						'&nbsp&nbsp</span><a href="#' +
+						u.attr("id") +
+						'" title="' +
+						title +
+						'">' +
+						u.text() +
+						"</a></li>";
+				}
+			}
+		});
+		$("#" + f + ">ul").html(j);
+		b.data("spy", "scroll");
+		b.data("target", ".sideCatalogBg");
+		$("body").scrollspy({
+			target: ".sideCatalogBg",
+		});
+		$sideCatelog = $("#" + e);
+		$("#" + g).on("click", function () {
+			if ($(this).hasClass("sideCatalogBtnDisable")) {
+				$sideCatelog.css("visibility", "hidden");
+			} else {
+				$sideCatelog.css("visibility", "visible");
+			}
+			$(this).toggleClass("sideCatalogBtnDisable");
+		});
+		$("#" + h).on("click", function () {
+			$("html,body").animate(
+				{
+					scrollTop: 0,
+				},
+				500
+			);
+		});
+		$sideToolbar = $("#" + d);
+
+		//通过判断评论框是否存在显示索引目录
+		var commentDiv = $("#blog-comments-placeholder");
+
+		a.on("scroll", function () {
+			//评论框存在才调用方法
+			if (commentDiv.length > 0) {
+				var t = a.scrollTop();
+				if (t > k) {
+					$sideToolbar.css("display", "block");
+					$("#gotop").show();
+				} else {
+					$sideToolbar.css("display", "none");
+					$("#gotop").hide();
+				}
+			}
+		});
+	});
+	//以上是锚点JS
+	//以下是返回顶部JS
+	$(function () {
+		$("body").append('<div id="gotop" onclick="goTop();"></div>');
+	});
+
+	function goTop(u, t, r) {
+		var scrollActivate = !0;
+		if (scrollActivate) {
+			u = u || 0.1;
+			t = t || 16;
+			var s = 0,
+				q = 0,
+				o = 0,
+				p = 0,
+				n = 0,
+				j = 0;
+			document.documentElement &&
+				((s = document.documentElement.scrollLeft || 0),
+				(q = document.documentElement.scrollTop || 0));
+			document.body &&
+				((o = document.body.scrollLeft || 0), (p = document.body.scrollTop || 0));
+			n = window.scrollX || 0;
+			j = window.scrollY || 0;
+			s = Math.max(s, Math.max(o, n));
+			q = Math.max(q, Math.max(p, j));
+			p = 1 + u;
+			window.scrollTo(Math.floor(s / p), Math.floor(q / p));
+			0 < s || 0 < q
+				? window.setTimeout("goTop(" + u + ", " + t + ")", t)
+				: "undefined" != typeof r && r();
+		} else {
+			scrollActivate = !0;
+		}
+	}
+	//以上是返回顶部JS
+</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		var pres = $("pre");
+		for (var i = 0; i < pres.length; i++) {
+			$(pres[i]).attr("id", "pre" + i);
+			$(pres[i]).children("code").hide();
+			$(pres[i]).prepend(
+				'<button id="btn' +
+					i +
+					'" onclick="view_code(\'pre' +
+					i +
+					"');\">view code</button>"
+			);
+		}
+	});
+	function view_code(id) {
+		var btn_text = document.getElementById(id).children[0].innerText;
+		var style;
+		var status;
+		if (btn_text == "view code") {
+			style = '""';
+			status = "hide code";
+		} else {
+			style = "display: none;";
+			status = "view code";
+		}
+		document.getElementById(id).children[0].innerText = status;
+		document.getElementById(id).children[1].style = style;
+	}
+</script>
