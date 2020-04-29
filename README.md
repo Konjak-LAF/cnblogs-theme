@@ -1,6 +1,6 @@
 # cnblogs-theme
 
-本主题大部分来源[阿豪聊干货](https://www.cnblogs.com/hafiz/p/9276689.html)大佬，本蒟蒻运用微薄的知识添加、修改了一些功能
+本主题大部分来源[阿豪聊干货](https://www.cnblogs.com/hafiz/p/9276689.html)大佬，本蒟蒻只是将其他大佬的功能与其结合
 
 # How to use
 
