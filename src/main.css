@@ -403,10 +403,6 @@ article header .title a:hover {
     padding: 0 0.5em;
 }
 
-#cnblogs_post_body code, #cnblogs_post_body pre {
-    font-family: Consolas;
-}
-
 #cnblogs_post_body ul ul, #cnblogs_post_body ol ul, #cnblogs_post_body dl ul, #cnblogs_post_body ul ol, #cnblogs_post_body ol ol, #cnblogs_post_body dl ol, #cnblogs_post_body ul dl, #cnblogs_post_body ol dl, #cnblogs_post_body dl dl {
     margin-top: 0;
 }
@@ -1114,6 +1110,11 @@ div.commentform textarea.comment_textarea {
 
 .buryit {
     display: none;
+}
+
+#cnblogs_post_body code {
+    font-family: Consolas !important;
+    font-size: 13px !important;
 }
 
 .cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
