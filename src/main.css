@@ -532,9 +532,9 @@ article header .title a:hover {
 }
 
 .feedbackItem:hover {
-    -webkit-animation-name: color_shine;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
+    animation-name: color_shine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 #comment_form .title {
@@ -1069,7 +1069,7 @@ div.commentform textarea.comment_textarea {
     border: 1px solid transparent;
     border-top: none;
     border-bottom: none;
-    -webkit-border-radius: 6px;
+    border-radius: 6px;
     background-color: rgba(0, 0, 0, .3);
     background-clip: padding-box;
 }
@@ -1102,7 +1102,7 @@ div.commentform textarea.comment_textarea {
     text-align: center;
     width: 60px;
     -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
+    border-radius: 4px;
     font-weight: bold;
 }
 
@@ -1114,7 +1114,6 @@ div.commentform textarea.comment_textarea {
 
 #cnblogs_post_body code {
     font-family: Consolas !important;
-    font-size: 13px !important;
 }
 
 .cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
