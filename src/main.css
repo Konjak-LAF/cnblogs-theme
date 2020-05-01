@@ -581,6 +581,21 @@ article header .title a:hover {
     float: right;
 }
 
+#sideBar #sideBarMain ul li a {
+    display: block;
+}
+
+#sideBar #sideBarMain ul li a:link, #sideBar #sideBarMain ul li a:visited {
+    text-decoration: none;
+    background-color: white;
+    filter: Alpha(Opacity=90);
+}
+
+#sideBar #sideBarMain ul li a:hover {
+    background-color: #FDF6E3;
+    filter: Alpha(Opacity=90);
+}
+
 @media screen and (max-width: 900px) {
     #sideBar {
         float: none;
