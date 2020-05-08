@@ -243,8 +243,6 @@ article.link .title a:after {
     vertical-align: super;
 }
 
-/******************************************以下自定义样式***********************************************/
-
 #MySignature {
     border-top: 2px solid #ccc;
     padding-top: 20px;
@@ -276,13 +274,9 @@ article.link .title a:after {
     display: none !important;
 }
 
-/* 去掉广告 */
-
 #ad_t2, #opt_under_post, .c_ad_block, #under_post_news, #under_post_kb {
     display: none !important;
 }
-
-/******************************************以上自定义样式***********************************************/
 
 .postTitle, .entrylistPosttitle {
     font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -313,8 +307,6 @@ article.link .title a:after {
     background: #fff;
     border-bottom: 1px dashed #ccc;
 }
-
-/* 去掉博客园自带日历控件 */
 
 #blog-calendar {
     display: none;
@@ -658,8 +650,6 @@ article header .title a:hover {
     color: #444;
 }
 
-/*隐藏搜索框中的无用组件*/
-
 .mySearch {
     display: none;
 }
@@ -876,8 +866,6 @@ figure table {
     padding: 0;
 }
 
-/*评论标题*/
-
 .feedback_area_title {
     padding: 10px;
     font-size: 24px;
@@ -913,8 +901,6 @@ figure table {
     border-bottom: 1px dashed #ccc;
 }
 
-/*评论框*/
-
 #comment_form {
     margin: 10px 0;
     padding: 25px;
@@ -926,8 +912,6 @@ figure table {
     padding: 10px 20px;
     background: #fff;
 }
-
-/*评论输入域*/
 
 #tbCommentBody {
     font-family: Consolas, '楷体';
@@ -942,8 +926,6 @@ figure table {
     border-radius: 10px;
 }
 
-/*评论条目*/
-
 .feedbackItem {
     font-size: 15px;
     font-family: "Lucida Grande", "Lucida Sans Unicode";
@@ -957,10 +939,7 @@ figure table {
     font-weight: normal;
 }
 
-/*green_channel*/
-
 #green_channel {
-    /* text-align: right; */
     padding-left: 0px;
     font-weight: normal;
     font-size: 13px;
@@ -1121,8 +1100,6 @@ div.commentform textarea.comment_textarea {
     font-weight: bold;
 }
 
-/* 删除反对按钮,有点邪恶了 */
-
 .buryit {
     display: none;
 }
@@ -1139,7 +1116,6 @@ div.commentform textarea.comment_textarea {
 }
 
 pre {
-    /*控制代码不换行*/
     white-space: pre;
     word-wrap: normal;
 }
@@ -1196,25 +1172,6 @@ pre {
 
 .hljs-comment, .hljs-deletion, .hljs-meta {
     color: #F6AA11;
-}
-
-button {
-    height: 30px;
-    width: 125px;
-    color: white;
-    background-color: cornflowerblue;
-    border-radius: 3px;
-    border-width: 0;
-    margin: 0;
-    outline: none;
-    font-family: Consolas;
-    font-size: 17px;
-    text-align: center;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #16A05D;
 }
 
 #btn_comment_submit {
@@ -1291,7 +1248,6 @@ div#comments_pager_top {
     padding: 2px 4px;
     border-radius: 2px;
     margin-right: 4px;
-    /*display: none;*/
 }
 
 .feedbackListSubtitle a[target="_blank"] {
@@ -1394,8 +1350,6 @@ div#comments_pager_top {
 .myself .comment_quote {
     border: 1px solid #4491B7;
 }
-
-/*以下锚点*/
 
 #sideToolbar {
     position: fixed;
@@ -1560,10 +1514,6 @@ div#comments_pager_top {
     z-index: 999;
 }
 
-/*以上是锚点*/
-
-/*以下是返回顶部*/
-
 #gotop {
     background: url("https://img2020.cnblogs.com/blog/1937713/202004/1937713-20200424152027677-1354206005.png") no-repeat scroll -1px -62px transparent !important;
     width: 45px;
@@ -1579,4 +1529,24 @@ div#comments_pager_top {
 
 #gotop:hover {
     background: url("https://img2020.cnblogs.com/blog/1937713/202004/1937713-20200424152027677-1354206005.png") no-repeat scroll -74px -62px transparent !important;
+}
+
+.cnblogs-markdown pre {
+    position: relative;
+}
+
+.cnblogs-markdown pre>span {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: 12px;
+    background: #007ACC;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cnblogs-markdown pre>.copyed {
+    background: #67c23a;
 }

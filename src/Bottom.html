@@ -1,9 +1,38 @@
 <script src="https://blog-static.cnblogs.com/files/KonjakLAF/bootstrap.min.js"></script>
+<script src="https://blog-static.cnblogs.com/files/KonjakLAF/clipboard.min.js"></script>
+<script>
+	$(function () {
+		if ($("#cnblogs_post_body").hasClass("cnblogs-markdown")) {
+			if ($("#post-date")[0]) {
+				var pres = $("pre");
+				if (pres.length) {
+					pres.each(function () {
+						var t = $(this).children("code").text();
+						var btn = $('<span class="copy">复制</span>').attr("data-clipboard-text", t);
+						$(this).prepend(btn);
+						var c = new ClipboardJS(btn[0]);
+						c.on("success", function () {
+							btn.addClass("copyed").text("复制成功");
+						});
+						c.on("error", function () {
+							btn.text("复制失败");
+						});
+						btn.mouseleave(function () {
+							setTimeout(function () {
+								btn.text("复制").removeClass("copyed");
+							}, 500);
+						});
+					});
+				}
+			}
+		}
+	});
+</script>
 <script type="text/javascript">
 	$(function () {
 		$("#blogTitle h1").addClass("bounceInLeft animated");
 		$("#blogTitle h2").addClass("bounceInRight animated");
-		// 删除反对按钮
+
 		$(".buryit").remove();
 		setTimeout(function () {
 			showAvatar();
@@ -12,8 +41,7 @@
 	function showAvatar() {
 		$(".feedbackItem").each(function () {
 			var avatar = $(this).children(".feedbackCon").children("span:last").html();
-			avatar = avatar ? avatar.replace("http://", "https://") : "https://pic.cnblogs.com/face/sample_face.gif"; //没有头像用默认头像
-			//console.log( avatar );
+			avatar = avatar ? avatar.replace("http://", "https://") : "https://pic.cnblogs.com/face/sample_face.gif";
 			$('<img src="' + avatar + '" class="user-avatar" />').prependTo($(this).children(".feedbackCon"));
 			if ($(this).find(".feedbackListSubtitle").find(".louzhu").length > 0) {
 				$(this).addClass("myself");

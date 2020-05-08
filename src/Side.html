@@ -1,21 +1,9 @@
-<!-- 添加公告栏时钟 -->
-<div
-	style="
-		border-top: 1px dashed #ccc;
-		padding: 5px;
-		border-bottom: 1px dashed #ccc;
-		height: 120px;
-	"
->
+<div style="border-top: 1px dashed #ccc; padding: 5px; border-bottom: 1px dashed #ccc; height: 120px;">
 	<div id="clockdiv">
 		<canvas id="dom" width="120" height="120">时钟canvas</canvas>
 	</div>
 </div>
 <script type="text/javascript">
-	/**
-	 * Created by Administrator on 2017/3/28 0028.
-	 * source from siwuxie095
-	 */
 	var canvas = document.getElementById("dom");
 	var context = canvas.getContext("2d");
 	var height = context.canvas.height;
@@ -41,7 +29,7 @@
 			var y = Math.sin(rad) * (r - 30 * rem);
 			context.fillText(number, x, y);
 		});
-		//瀹氫箟鍒诲害
+
 		for (var i = 0; i < 60; i++) {
 			var rad = ((2 * Math.PI) / 60) * i;
 			var x = Math.cos(rad) * (r - 18 * rem);
@@ -123,7 +111,6 @@
 	setInterval(Draw, 1000);
 </script>
 <script type="text/javascript">
-	//以下是锚点JS
 	var a = $(document);
 	a.ready(function () {
 		var b = $("body"),
@@ -139,8 +126,6 @@
 			l = 0,
 			m = 0,
 			n = 0,
-			//限制存在个数，如数量过多，则只显示h2，不显示h3
-			//o, p = 13,
 			o,
 			p = 100,
 			q = true,
@@ -150,8 +135,7 @@
 			return;
 		}
 		b.append(i);
-		//指定获取目录的范围-------------这一点非常重要，因为每个人指定的范围都不一样，所以这是要修改的地方
-		//o = s.find(':header');
+
 		o = $("#cnblogs_post_body").find(":header");
 		if (o.length > p) {
 			r = false;
@@ -169,9 +153,7 @@
 			var text = u.text();
 
 			u.attr("id", "autoid-" + l + "-" + m + "-" + n);
-			//if (!u.attr('id')) {
-			//    u.attr('id', 'autoid-' + l + '-' + m + '-' + n)
-			//};
+
 			if (v.localName === "h1") {
 				l++;
 				m = 0;
@@ -249,11 +231,9 @@
 		});
 		$sideToolbar = $("#" + d);
 
-		//通过判断评论框是否存在显示索引目录
 		var commentDiv = $("#blog-comments-placeholder");
 
 		a.on("scroll", function () {
-			//评论框存在才调用方法
 			if (commentDiv.length > 0) {
 				var t = a.scrollTop();
 				if (t > k) {
@@ -266,8 +246,7 @@
 			}
 		});
 	});
-	//以上是锚点JS
-	//以下是返回顶部JS
+
 	$(function () {
 		$("body").append('<div id="gotop" onclick="goTop();"></div>');
 	});
@@ -283,53 +262,17 @@
 				p = 0,
 				n = 0,
 				j = 0;
-			document.documentElement &&
-				((s = document.documentElement.scrollLeft || 0),
-				(q = document.documentElement.scrollTop || 0));
-			document.body &&
-				((o = document.body.scrollLeft || 0), (p = document.body.scrollTop || 0));
+			document.documentElement && ((s = document.documentElement.scrollLeft || 0), (q = document.documentElement.scrollTop || 0));
+			document.body && ((o = document.body.scrollLeft || 0), (p = document.body.scrollTop || 0));
 			n = window.scrollX || 0;
 			j = window.scrollY || 0;
 			s = Math.max(s, Math.max(o, n));
 			q = Math.max(q, Math.max(p, j));
 			p = 1 + u;
 			window.scrollTo(Math.floor(s / p), Math.floor(q / p));
-			0 < s || 0 < q
-				? window.setTimeout("goTop(" + u + ", " + t + ")", t)
-				: "undefined" != typeof r && r();
+			0 < s || 0 < q ? window.setTimeout("goTop(" + u + ", " + t + ")", t) : "undefined" != typeof r && r();
 		} else {
 			scrollActivate = !0;
 		}
-	}
-	//以上是返回顶部JS
-</script>
-<script type="text/javascript">
-	$(document).ready(function () {
-		var pres = $("pre");
-		for (var i = 0; i < pres.length; i++) {
-			$(pres[i]).attr("id", "pre" + i);
-			$(pres[i]).children("code").hide();
-			$(pres[i]).prepend(
-				'<button id="btn' +
-					i +
-					'" onclick="view_code(\'pre' +
-					i +
-					"');\">view code</button>"
-			);
-		}
-	});
-	function view_code(id) {
-		var btn_text = document.getElementById(id).children[0].innerText;
-		var style;
-		var status;
-		if (btn_text == "view code") {
-			style = '""';
-			status = "hide code";
-		} else {
-			style = "display: none;";
-			status = "view code";
-		}
-		document.getElementById(id).children[0].innerText = status;
-		document.getElementById(id).children[1].style = style;
 	}
 </script>
