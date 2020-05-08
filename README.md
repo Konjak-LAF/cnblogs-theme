@@ -5,8 +5,8 @@
 # How to use
 
 1. 申请 JS 限权
-2. 把 js/bootstrap.min.js 上传到文件处
-3. src/Bottom.html 第一行的 src 改成自己的地址
+2. 把 js/ 中的文件上传到文件处
+3. src/Bottom.html 前两行的 src 改成自己的地址
 4. 默认主题 MoonLightInk
 5. 复制代码到对应位置
 
