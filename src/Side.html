@@ -3,7 +3,9 @@
 		<canvas id="dom" width="120" height="120">时钟canvas</canvas>
 	</div>
 </div>
+<!-- 添加时钟 div -->
 <script type="text/javascript">
+	// 绘制时钟
 	var canvas = document.getElementById("dom");
 	var context = canvas.getContext("2d");
 	var height = context.canvas.height;
@@ -113,6 +115,7 @@
 <script type="text/javascript">
 	var a = $(document);
 	a.ready(function () {
+		// 生成侧边目录
 		var b = $("body"),
 			d = "sideToolbar",
 			e = "sideCatalog",
@@ -252,6 +255,7 @@
 	});
 
 	function goTop(u, t, r) {
+		// 返回顶部 JS
 		var scrollActivate = !0;
 		if (scrollActivate) {
 			u = u || 0.1;

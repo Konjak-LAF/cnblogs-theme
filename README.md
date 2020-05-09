@@ -18,8 +18,6 @@
 
     Top.html --> 页首 HTML
 
-    autoGraph.html --> 博客签名（管理 --> 左侧链接）
-
 # How to customize
 
 如果你只想使用，到这里可以了

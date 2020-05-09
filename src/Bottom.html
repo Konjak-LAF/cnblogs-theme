@@ -2,6 +2,7 @@
 <script src="https://blog-static.cnblogs.com/files/KonjakLAF/clipboard.min.js"></script>
 <script>
 	$(function () {
+		// 代码复制功能
 		if ($("#cnblogs_post_body").hasClass("cnblogs-markdown")) {
 			if ($("#post-date")[0]) {
 				var pres = $("pre");
@@ -30,6 +31,7 @@
 </script>
 <script type="text/javascript">
 	$(function () {
+		// 隐藏反对按钮
 		$("#blogTitle h1").addClass("bounceInLeft animated");
 		$("#blogTitle h2").addClass("bounceInRight animated");
 
@@ -39,6 +41,7 @@
 		}, 1000);
 	});
 	function showAvatar() {
+		// 显示评论用户头像
 		$(".feedbackItem").each(function () {
 			var avatar = $(this).children(".feedbackCon").children("span:last").html();
 			avatar = avatar ? avatar.replace("http://", "https://") : "https://pic.cnblogs.com/face/sample_face.gif";
@@ -51,6 +54,7 @@
 </script>
 <script>
 	(function (window, document, undefined) {
+		// 鼠标点击爱心特效
 		var hearts = [];
 		window.requestAnimationFrame = (function () {
 			return (

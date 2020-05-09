@@ -1,3 +1,5 @@
+/*以下样式自定义*/
+
 * {
     margin: 0;
     padding: 0;
@@ -792,35 +794,6 @@ figure.highlight .gutter {
     text-align: right;
 }
 
-pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .pi, pre .lisp .string, pre .javadoc {
-    color: #93a1a1;
-    font-style: italic;
-}
-
-pre .keyword, pre .winutils, pre .method, pre .addition, pre .css .tag, pre .request, pre .status, pre .nginx .title {
-    color: #859900;
-}
-
-pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor {
-    color: #2aa198;
-}
-
-pre .title, pre .localvars, pre .chunk, pre .decorator, pre .built_in, pre .identifier, pre .vhdl, pre .literal, pre .id {
-    color: #268bd2;
-}
-
-pre .attribute, pre .variable, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title, pre .parent, pre .haskell .type {
-    color: #b58900;
-}
-
-pre .preprocessor, pre .preprocessor .keyword, pre .shebang, pre .symbol, pre .symbol .string, pre .diff .change, pre .special, pre .attr_selector, pre .important, pre .subst, pre .cdata, pre .clojure .title {
-    color: #cb4b16;
-}
-
-pre .deletion {
-    color: #dc322f;
-}
-
 .feedbackManage {
     width: 160px;
     position: absolute;
@@ -1014,15 +987,15 @@ div.commentform textarea.comment_textarea {
     padding: 10px;
 }
 
-#tbCommentBody {
-    width: 98%;
-}
-
 #cnblogs_post_body h3:hover {
     color: #FAF391;
     font-size: 23px;
     font-weight: bold;
 }
+
+/*以上样式自定义*/
+
+/*文章标题样式开始*/
 
 .postTitle {
     font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -1048,9 +1021,17 @@ div.commentform textarea.comment_textarea {
     transition: all 0.4s linear 0s;
 }
 
+/*文章标题样式结束*/
+
+/*时钟样式开始*/
+
 #clockdiv {
     text-align: center;
 }
+
+/*时钟样式结束*/
+
+/*浏览器滚动条样式开始*/
 
 ::-webkit-scrollbar {
     width: 10px!important;
@@ -1068,6 +1049,10 @@ div.commentform textarea.comment_textarea {
     background-clip: padding-box;
 }
 
+/*浏览器样式结束*/
+
+/*点赞样式开始*/
+
 #div_digg {
     padding: 5px;
     border-radius: 5px;
@@ -1075,7 +1060,7 @@ div.commentform textarea.comment_textarea {
     left: 0;
     bottom: 80px;
     width: 80px;
-    z-index: 100;
+    z-index: 999;
 }
 
 .diggit {
@@ -1100,9 +1085,17 @@ div.commentform textarea.comment_textarea {
     font-weight: bold;
 }
 
+/*点赞样式结束*/
+
+/*反对样式开始*/
+
 .buryit {
     display: none;
 }
+
+/*反对样式结束*/
+
+/*Monakai 代码样式开始*/
 
 #cnblogs_post_body code {
     font-family: Consolas !important;
@@ -1174,6 +1167,10 @@ pre {
     color: #F6AA11;
 }
 
+/*Monakai 代码样式结束*/
+
+/*提交评论按钮样式开始*/
+
 #btn_comment_submit {
     height: 30px;
     width: 75px;
@@ -1192,6 +1189,10 @@ pre {
 #btn_comment_submit:hover {
     background-color: #16A05D;
 }
+
+/*提交评论按钮样式结束*/
+
+/*评论区样式开始*/
 
 .user-avatar {
     position: absolute;
@@ -1350,6 +1351,10 @@ div#comments_pager_top {
 .myself .comment_quote {
     border: 1px solid #4491B7;
 }
+
+/*评论区样式结束*/
+
+/*侧边栏目录样式开始*/
 
 #sideToolbar {
     position: fixed;
@@ -1510,9 +1515,9 @@ div#comments_pager_top {
     background: url(https://img2020.cnblogs.com/blog/1937713/202004/1937713-20200424152027677-1354206005.png) no-repeat scroll -74px -62px transparent
 }
 
-#div_digg {
-    z-index: 999;
-}
+/*侧边栏目录样式结束*/
+
+/*侧边栏返回顶部样式开始*/
 
 #gotop {
     background: url(https://img2020.cnblogs.com/blog/1937713/202004/1937713-20200424152027677-1354206005.png) no-repeat scroll -1px -62px transparent !important;
@@ -1530,6 +1535,10 @@ div#comments_pager_top {
 #gotop:hover {
     background: url(https://img2020.cnblogs.com/blog/1937713/202004/1937713-20200424152027677-1354206005.png) no-repeat scroll -74px -62px transparent !important;
 }
+
+/*侧边栏返回顶部样式结束*/
+
+/*代码复制按钮样式开始*/
 
 .cnblogs-markdown pre {
     position: relative;
@@ -1550,6 +1559,10 @@ div#comments_pager_top {
 .cnblogs-markdown pre>.copyed {
     background: #67c23a;
 }
+
+/*代码复制按钮样式结束*/
+
+/*Github 链接样式开始*/
 
 .github-corner :hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
@@ -1664,6 +1677,10 @@ div#comments_pager_top {
     }
 }
 
+/*Github 链接样式结束*/
+
+/*版权信息样式开始*/
+
 #MySignature {
     display: block;
     border-radius: 7px;
@@ -1680,3 +1697,5 @@ div#comments_pager_top {
     padding: 0;
     display: contents;
 }
+
+/*版权信息样式结束*/
