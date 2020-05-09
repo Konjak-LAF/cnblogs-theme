@@ -20,3 +20,16 @@
 		></path>
 	</svg>
 </a>
+<script>
+	setTimeout(function () {
+		var MySignature = document.getElementById("MySignature");
+		var postTitleUrl = document.querySelector(".postTitle a").getAttribute("href");
+		MySignature.innerHTML =
+			'<div><p>作者:<a href="https://www.cnblogs.com/KonjakLAF">小蒟蒻 laf</a></p><p>出处:<a href=' +
+			postTitleUrl +
+			">" +
+			postTitleUrl +
+			"</a></p>" +
+			"<p>本文版权归作者和博客园共有，欢迎转载，但未经作者同意必须在文章页面给出原文链接，否则保留追究法律责任的权利。</p></div>";
+	}, 500);
+</script>
