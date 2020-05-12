@@ -1103,7 +1103,7 @@ div.commentform textarea.comment_textarea {
 
 .cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
     font-family: "Consolas", sans-serif!important;
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 1.5!important;
     padding: 5px !important;
 }
@@ -1546,11 +1546,12 @@ div#comments_pager_top {
 
 .cnblogs-markdown pre>span {
     position: absolute;
-    top: 1px;
+    top: 0.5px;
     right: 1px;
     border-radius: 2px;
     padding: 0 10px;
-    font-size: 12px;
+    font-family: "KaiTi";
+    font-size: 15px;
     background: #007ACC;
     color: #fff;
     cursor: pointer;
