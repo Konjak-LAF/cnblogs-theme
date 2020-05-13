@@ -142,8 +142,8 @@
 		o = $("#cnblogs_post_body").find(":header");
 		if (o.length > p) {
 			r = false;
-			var t = s.find("h3");
-			var u = s.find("h5");
+			var t = s.find("h3"); // 需更改
+			var u = s.find("h5"); // 需更改
 			if (t.length + u.length > p) {
 				q = false;
 			}
@@ -158,6 +158,7 @@
 			u.attr("id", "autoid-" + l + "-" + m + "-" + n);
 
 			if (v.localName === "h1") {
+				// 需更改 h1
 				l++;
 				m = 0;
 				if (text.length > 14) text = text.substr(0, 20) + "...";
@@ -172,6 +173,7 @@
 					text +
 					'</a><span class="sideCatalog-dot"></span></li>';
 			} else if (v.localName === "h3") {
+				// 需更改 h3
 				m++;
 				n = 0;
 				if (q) {
@@ -190,6 +192,7 @@
 						"</a></li>";
 				}
 			} else if (v.localName === "h5") {
+				// 需更改 h5
 				n++;
 				if (r) {
 					j +=
