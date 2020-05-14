@@ -4,6 +4,30 @@
 	</div>
 </div>
 <!-- 添加时钟 div -->
+<div class="loader">
+	<div class="loader-inner">
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+		<div class="loader-line-wrap">
+			<div class="loader-line"></div>
+		</div>
+	</div>
+</div>
+<script>
+	setTimeout(function () {
+		$(".loader").remove();
+	}, 6075);
+</script>
 <script type="text/javascript">
 	// 绘制时钟
 	var canvas = document.getElementById("dom");

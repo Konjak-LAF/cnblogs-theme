@@ -73,7 +73,7 @@
 		var flakes = [],
 			canvas = document.getElementById("Snow"), //画布ID，与上一步创建的画布对应
 			ctx = canvas.getContext("2d"),
-			flakeCount = 100, //雪花数量，数值越大雪花数量越多
+			flakeCount = 75, //雪花数量，数值越大雪花数量越多
 			mX = -100,
 			mY = -100;
 
@@ -134,7 +134,7 @@
 			flake.x = Math.floor(Math.random() * canvas.width);
 			flake.y = 0;
 			flake.size = Math.random() * 3 + 2; //加号后面的值，雪花大小，为基准值，数值越大雪花越大
-			flake.speed = Math.random() * 1 + 1.0; //加号后面的值，雪花速度，为基准值，数值越大雪花速度越快
+			flake.speed = Math.random() * 1 + 1.5; //加号后面的值，雪花速度，为基准值，数值越大雪花速度越快
 			flake.velY = flake.speed;
 			flake.velX = 0;
 			flake.opacity = Math.random() * 0.5 + 0.3; //加号后面的值，为基准值，范围0~1
