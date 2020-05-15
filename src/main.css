@@ -1716,18 +1716,6 @@ div#comments_pager_top {
 
 /*雪花 div 样式结束*/
 
-/*鼠标指针样式开始*/
-
-html {
-    cursor: url(https://blog-static.cnblogs.com/files/KonjakLAF/body.ico), auto;
-}
-
-a:hover, #sideCatalogBtn:hover, #gotop:hover, .diggit:hover, .diggnum:hover {
-    cursor: url(https://blog-static.cnblogs.com/files/KonjakLAF/link.ico), auto;
-}
-
-/*鼠标指针样式结束*/
-
 /*页面加载样式开始*/
 
 .loader {
