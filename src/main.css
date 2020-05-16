@@ -377,10 +377,9 @@ article header .title a:hover {
 #cnblogs_post_body blockquote {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    font-style: italic;
-    font-family: "Georgia", serif;
-    font-size: 1.2em;
-    padding: 0 30px 15px;
+    border-left: 10px solid #ddd;
+    font-family: "Consolas", "KaiTi", serif;
+    font-size: 1.0em;
 }
 
 #cnblogs_post_body blockquote footer {
@@ -731,7 +730,7 @@ article header .title a:hover {
 
 .entry .gist .gist-file .gist-data pre {
     padding: 0 !important;
-    font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+    font-family: Monaco, Menlo, "Consolas", Courier New, monospace;
 }
 
 .entry .gist .gist-file .gist-meta {
@@ -887,7 +886,7 @@ figure table {
 }
 
 #tbCommentBody {
-    font-family: Consolas, 'KaiTi';
+    font-family: "Consolas", 'KaiTi';
     margin-top: 10px;
     background: white;
     color: #333;
@@ -1098,7 +1097,7 @@ div.commentform textarea.comment_textarea {
 /*Monakai 代码样式开始*/
 
 #cnblogs_post_body code {
-    font-family: Consolas !important;
+    font-family: "Consolas","KaiTi" !important;
 }
 
 .cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
@@ -1441,7 +1440,7 @@ div#comments_pager_top {
 
 #sideCatalog span:first-child {
     color: #999;
-    font-family: Consolas;
+    font-family: "Consolas";
     font-size: 16px;
     font-weight: bold;
     padding-right: 5px
