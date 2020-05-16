@@ -29,32 +29,54 @@
 		}
 	});
 </script>
-<div class="loader">
-	<div class="loader-inner">
-		<div class="loader-line-wrap">
-			<div class="loader-line"></div>
+<div id="loader-canvas">
+	<div id="loader">
+		<div id="lemon"></div>
+		<div id="straw"></div>
+		<div id="glass">
+			<div id="cubes">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id="drink"></div>
+			<span id="counter"></span>
 		</div>
-		<div class="loader-line-wrap">
-			<div class="loader-line"></div>
-		</div>
-		<div class="loader-line-wrap">
-			<div class="loader-line"></div>
-		</div>
-		<div class="loader-line-wrap">
-			<div class="loader-line"></div>
-		</div>
-		<div class="loader-line-wrap">
-			<div class="loader-line"></div>
-		</div>
+		<div id="coaster"></div>
 	</div>
 </div>
 <script>
-	setTimeout(function () {
-		$(".loader").fadeOut(1500);
+	var loaded = 0;
+	var work = null;
+
+	function increment() {
+		$("#counter").html(loaded + "%");
+		$("#drink").css("top", 100 - loaded * 0.9 + "%");
+		if (loaded == 25) $("#cubes div:nth-child(1)").fadeIn(100);
+		if (loaded == 50) $("#cubes div:nth-child(2)").fadeIn(100);
+		if (loaded == 75) $("#cubes div:nth-child(3)").fadeIn(100);
+		if (loaded == 100) {
+			$("#lemon").fadeIn(100);
+			$("#straw").fadeIn(300);
+			clearInterval(work);
+			setTimeout(function () {
+				$("#loader-canvas").fadeOut(1000);
+				setTimeout(function () {
+					$("#loader-canvas").remove();
+				}, 1500);
+			}, 1500);
+		} else loaded++;
+	}
+
+	function startLoading() {
+		$("#lemon").hide();
+		$("#straw").hide();
+		$("#cubes div").hide();
 		setTimeout(function () {
-			$(".loader").remove();
-		}, 1500);
-	}, 5000);
+			work = setInterval(increment, 45);
+		}, 2000);
+	}
+	startLoading();
 </script>
 <script type="text/javascript">
 	$(function () {
@@ -67,11 +89,13 @@
 			showAvatar();
 		}, 1000);
 	});
+
 	function showAvatar() {
 		// 显示评论用户头像
 		$(".feedbackItem").each(function () {
 			var avatar = $(this).children(".feedbackCon").children("span:last").html();
-			avatar = avatar ? avatar.replace("http://", "https://") : "https://pic.cnblogs.com/face/sample_face.gif";
+			avatar = avatar ? avatar.replace("http://", "https://") :
+				"https://pic.cnblogs.com/face/sample_face.gif";
 			$('<img src="' + avatar + '" class="user-avatar" />').prependTo($(this).children(".feedbackCon"));
 			if ($(this).find(".feedbackListSubtitle").find(".louzhu").length > 0) {
 				$(this).addClass("myself");
@@ -235,9 +259,17 @@
 <!-- 鼠标点击粒子特效 -->
 <script>
 	class Circle {
-		constructor({ origin, speed, color, angle, context }) {
+		constructor({
+			origin,
+			speed,
+			color,
+			angle,
+			context
+		}) {
 			this.origin = origin;
-			this.position = { ...this.origin };
+			this.position = {
+				...this.origin
+			};
 			this.color = color;
 			this.speed = speed;
 			this.angle = angle;
@@ -260,7 +292,12 @@
 	}
 
 	class Boom {
-		constructor({ origin, context, circleCount = 10, area }) {
+		constructor({
+			origin,
+			context,
+			circleCount = 10,
+			area
+		}) {
 			this.origin = origin;
 			this.context = context;
 			this.circleCount = circleCount;
@@ -339,7 +376,10 @@
 
 		handleMouseDown(e) {
 			const boom = new Boom({
-				origin: { x: e.clientX, y: e.clientY },
+				origin: {
+					x: e.clientX,
+					y: e.clientY
+				},
 				context: this.computerContext,
 				area: {
 					width: this.globalWidth,
@@ -397,4 +437,5 @@
 	const cursorSpecialEffects = new CursorSpecialEffects();
 	cursorSpecialEffects.init();
 </script>
-<canvas width="100%" height="100%" style="position: fixed; left: 0px; top: 0px; z-index: 999999; pointer-events: none;"></canvas>
+<canvas width="100%" height="100%"
+	style="position: fixed; left: 0px; top: 0px; z-index: 999999; pointer-events: none;"></canvas>
