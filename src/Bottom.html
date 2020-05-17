@@ -43,6 +43,7 @@
 			<span id="counter"></span>
 		</div>
 		<div id="coaster"></div>
+		<footer id="loader-tips">Loading</footer>
 	</div>
 </div>
 <script>
@@ -60,7 +61,7 @@
 			$("#straw").fadeIn(300);
 			clearInterval(work);
 			setTimeout(function () {
-				$("#loader-canvas").fadeOut(1000);
+				$("#loader-canvas").fadeOut(1500);
 				setTimeout(function () {
 					$("#loader-canvas").remove();
 				}, 1500);
@@ -234,7 +235,7 @@
 	$(function () {
 		setTimeout(() => {
 			document.title = OriginTitile;
-		}, 250);
+		}, 4500);
 	});
 	document.addEventListener("visibilitychange", function () {
 		if (document.hidden) {
