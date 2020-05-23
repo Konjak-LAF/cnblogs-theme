@@ -74,7 +74,7 @@
 		$("#straw").hide();
 		$("#cubes div").hide();
 		setTimeout(function () {
-			work = setInterval(increment, 45);
+			work = setInterval(increment, 25);
 		}, 2000);
 	}
 	startLoading();
@@ -88,7 +88,7 @@
 		$(".buryit").remove();
 		setTimeout(function () {
 			showAvatar();
-		}, 1000);
+		}, 1500);
 	});
 
 	function showAvatar() {
@@ -235,7 +235,7 @@
 	$(function () {
 		setTimeout(() => {
 			document.title = OriginTitile;
-		}, 4500);
+		}, 100);
 	});
 	document.addEventListener("visibilitychange", function () {
 		if (document.hidden) {
@@ -245,17 +245,25 @@
 			document.title = "欢迎回来～"; // 切入文字
 			titleTime = setTimeout(function () {
 				document.title = OriginTitile;
-			}, 1000); // 2秒后恢复原标题
+			}, 1000); // 恢复原标题
 		}
 	});
 </script>
 <!-- 更改标题图标 -->
-<div style="display: none;"></div>
 <script>
-	var linkObject = document.createElement("link");
-	linkObject.rel = "shortcut icon";
-	linkObject.href = "https://img2020.cnblogs.com/blog/1937713/202005/1937713-20200513155845186-1438415765.png";
-	document.getElementsByTagName("head")[0].appendChild(linkObject);
+	const changeFavicon = link => {
+		let $favicon = document.querySelector('link[rel="shortcut icon"]');
+		if ($favicon !== null) {
+			$favicon.href = link;
+		} else {
+			$favicon = document.createElement("link");
+			$favicon.rel = "shortcut icon";
+			$favicon.href = link;
+			document.head.appendChild($favicon);
+		}
+	};
+	let icon = "https://pic.cnblogs.com/face/1937713/20200521210743.png"; // 图片地址
+	changeFavicon(icon); // 动态修改网站图标
 </script>
 <!-- 鼠标点击粒子特效 -->
 <script>

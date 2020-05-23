@@ -1,5 +1,3 @@
-/*以下样式自定义*/
-
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +24,12 @@ body {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Consolas", "KaiTi", Helvetica, Arial, Verdana, sans-serif;
 }
 
@@ -76,7 +79,9 @@ a:hover {
     float: right;
 }
 
-#header, #main, #footer {
+#header,
+#main,
+#footer {
     width: 100%;
     margin: 0 auto;
 }
@@ -176,41 +181,6 @@ a:hover {
     font-size: 13px;
 }
 
-.topicListFooter {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-right: 0 !important;
-}
-
-.topicListFooter a {
-    display: inline !important;
-    padding: 10px 20px;
-    background: #ddd;
-    color: #999;
-    font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
-    text-shadow: 0 0 1px #fff;
-    border-radius: 5px;
-}
-
-.topicListFooter a:hover {
-    background: #258fb8;
-    color: #fff;
-    text-decoration: none;
-    text-shadow: none;
-}
-
-.topicListFooter .prev:before {
-    content: '\f053';
-    padding-right: 10px;
-    font-family: FontAwesome;
-}
-
-.topicListFooter .next:after {
-    content: '\f054';
-    padding-left: 10px;
-    font-family: FontAwesome;
-}
-
 article {
     -webkit-box-shadow: 1px 2px 3px #ddd;
     box-shadow: 1px 2px 3px #ddd;
@@ -260,6 +230,7 @@ article.link .title a:after {
     width: 0px;
     height: 0px;
     display: none !important;
+    /*隐藏日历*/
 }
 
 #TopViewPostsBlock ul li {
@@ -276,11 +247,17 @@ article.link .title a:after {
     display: none !important;
 }
 
-#ad_t2, #opt_under_post, .c_ad_block, #under_post_news, #under_post_kb {
+#ad_t2,
+#opt_under_post,
+.c_ad_block,
+#under_post_news,
+#under_post_kb {
     display: none !important;
+    /*隐藏广告*/
 }
 
-.postTitle, .entrylistPosttitle {
+.postTitle,
+.entrylistPosttitle {
     font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 1.8em;
     padding: 20px 20px 15px 0px;
@@ -291,7 +268,9 @@ article.link .title a:after {
     text-overflow: ellipsis;
 }
 
-.entrylistPostSummary, .postCon, .postBody {
+.entrylistPostSummary,
+.postCon,
+.postBody {
     padding: 0 20px 15px 0px;
     -webkit-box-shadow: 1px 2px 3px #ddd;
     box-shadow: 0 2px 0 #ddd;
@@ -299,7 +278,8 @@ article.link .title a:after {
     position: relative;
 }
 
-.postDesc, .entrylistItemPostDesc {
+.postDesc,
+.entrylistItemPostDesc {
     padding: 0px 20px 15px 0px;
     color: #999;
     font-size: 0.9em;
@@ -370,7 +350,18 @@ article header .title a:hover {
     line-height: 1.6;
 }
 
-#cnblogs_post_body p, #cnblogs_post_body blockquote, #cnblogs_post_body ul, #cnblogs_post_body ol, #cnblogs_post_body dl, #cnblogs_post_body table, #cnblogs_post_body iframe, #cnblogs_post_body h3, #cnblogs_post_body h4, #cnblogs_post_body h5, #cnblogs_post_body h6, #cnblogs_post_body .video-container {
+#cnblogs_post_body p,
+#cnblogs_post_body blockquote,
+#cnblogs_post_body ul,
+#cnblogs_post_body ol,
+#cnblogs_post_body dl,
+#cnblogs_post_body table,
+#cnblogs_post_body iframe,
+#cnblogs_post_body h3,
+#cnblogs_post_body h4,
+#cnblogs_post_body h5,
+#cnblogs_post_body h6,
+#cnblogs_post_body .video-container {
     margin-top: 15px;
 }
 
@@ -396,7 +387,15 @@ article header .title a:hover {
     padding: 0 0.5em;
 }
 
-#cnblogs_post_body ul ul, #cnblogs_post_body ol ul, #cnblogs_post_body dl ul, #cnblogs_post_body ul ol, #cnblogs_post_body ol ol, #cnblogs_post_body dl ol, #cnblogs_post_body ul dl, #cnblogs_post_body ol dl, #cnblogs_post_body dl dl {
+#cnblogs_post_body ul ul,
+#cnblogs_post_body ol ul,
+#cnblogs_post_body dl ul,
+#cnblogs_post_body ul ol,
+#cnblogs_post_body ol ol,
+#cnblogs_post_body dl ol,
+#cnblogs_post_body ul dl,
+#cnblogs_post_body ol dl,
+#cnblogs_post_body dl dl {
     margin-top: 0;
 }
 
@@ -444,7 +443,10 @@ article header .title a:hover {
     text-shadow: 2px 2px 3px #222222;
 }
 
-.postBody img, .entrylistPostSummary img, .postCon img, .postBody video {
+.postBody img,
+.entrylistPostSummary img,
+.postCon img,
+.postBody video {
     max-width: 100%;
     height: auto;
     border: none;
@@ -480,7 +482,9 @@ article header .title a:hover {
     overflow: hidden;
 }
 
-#cnblogs_post_body .video-container iframe, #cnblogs_post_body .video-container object, #cnblogs_post_body .video-container embed {
+#cnblogs_post_body .video-container iframe,
+#cnblogs_post_body .video-container object,
+#cnblogs_post_body .video-container embed {
     position: absolute;
     top: 0;
     left: 0;
@@ -499,7 +503,8 @@ article header .title a:hover {
     font-size: 1.5em;
 }
 
-#blog-comments-placeholder, #comment_form {
+#blog-comments-placeholder,
+#comment_form {
     padding: 20px;
     background: #fff;
     -webkit-box-shadow: 1px 10px 10px #ddd;
@@ -578,7 +583,8 @@ article header .title a:hover {
     display: block;
 }
 
-#sideBar #sideBarMain ul li a:link, #sideBar #sideBarMain ul li a:visited {
+#sideBar #sideBarMain ul li a:link,
+#sideBar #sideBarMain ul li a:visited {
     text-decoration: none;
     background-color: white;
     filter: Alpha(Opacity=90);
@@ -596,11 +602,20 @@ article header .title a:hover {
     }
 }
 
-.catListLink, .catListMyTeams, .catListComment, .catListFeedback {
+.catListLink,
+.catListMyTeams,
+.catListComment,
+.catListFeedback {
     display: none;
 }
 
-.search, .newsItem, .catListPostCategory, .catListPostArchive, .catListTag, .catListView, .catListBlogRank {
+.search,
+.newsItem,
+.catListPostCategory,
+.catListPostArchive,
+.catListTag,
+.catListView,
+.catListBlogRank {
     background: #fff;
     -webkit-box-shadow: 1px 2px 3px #ddd;
     box-shadow: 10px 10px 10px #ddd;
@@ -611,23 +626,35 @@ article header .title a:hover {
     border: 1px solid #ddd;
 }
 
-#blog-sidecolumn h3, .newsItem h3 {
+#blog-sidecolumn h3,
+.newsItem h3 {
     padding: 15px 20px;
     font-size: 1em;
     border-bottom: 1px solid #ddd;
     font-weight: normal;
 }
 
-#blog-sidecolumn ul, .newsItem #blog-news {
+#blog-sidecolumn ul,
+.newsItem #blog-news {
     font-size: 0.9em;
     padding: 15px 20px;
 }
 
-#blog-sidecolumn ul, #blog-sidecolumn ol, #blog-sidecolumn dl {
+#blog-sidecolumn ul,
+#blog-sidecolumn ol,
+#blog-sidecolumn dl {
     list-style: none;
 }
 
-#blog-sidecolumn ul ul, #blog-sidecolumn ol ul, #blog-sidecolumn dl ul, #blog-sidecolumn ul ol, #blog-sidecolumn ol ol, #blog-sidecolumn dl ol, #blog-sidecolumn ul dl, #blog-sidecolumn ol dl, #blog-sidecolumn dl dl {
+#blog-sidecolumn ul ul,
+#blog-sidecolumn ol ul,
+#blog-sidecolumn dl ul,
+#blog-sidecolumn ul ol,
+#blog-sidecolumn ol ol,
+#blog-sidecolumn dl ol,
+#blog-sidecolumn ul dl,
+#blog-sidecolumn ol dl,
+#blog-sidecolumn dl dl {
     list-style: disc;
     margin-left: 20px;
 }
@@ -834,7 +861,8 @@ figure table {
     margin: 0 !important;
 }
 
-#cnblogs_post_body th, #cnblogs_post_body td {
+#cnblogs_post_body th,
+#cnblogs_post_body td {
     padding: 0;
 }
 
@@ -926,51 +954,65 @@ figure table {
     body {
         font-size: 13px;
     }
+
     #main {
         padding: 0px !important;
     }
+
     #mainContent {
         width: 96%;
         float: left;
         margin: 0px 2%;
     }
+
     #sideBar {
         display: none;
     }
+
     #blogTitle {
         width: 100%;
         float: none;
         margin: 20px auto 0 !important;
     }
+
     #header {
         height: auto !important;
         margin: 20px auto 5px;
     }
+
     #header #navigator {
         width: 100%;
         text-align: center;
         float: none;
     }
+
     #header #navigator ul {
         width: 100%;
         margin-left: 6%;
     }
+
     #header #navigator ul li {
         float: left;
         width: 25%;
         text-align: center;
         margin-right: 0px;
     }
-    .postTitle, .entrylistPosttitle {
+
+    .postTitle,
+    .entrylistPosttitle {
         font-size: 14px;
         padding: 20px 20px 15px 0px;
     }
-    .postDesc, .entrylistItemPostDesc {
+
+    .postDesc,
+    .entrylistItemPostDesc {
         padding: 0px 20px 15px 0px;
     }
+
     #green_channel {
         padding: 0px !important;
     }
+
     #blog_stats {
         display: none;
     }
@@ -992,7 +1034,40 @@ div.commentform textarea.comment_textarea {
     font-weight: bold;
 }
 
-/*以上样式自定义*/
+.topicListFooter {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 0 !important;
+}
+
+.topicListFooter a {
+    display: inline !important;
+    padding: 10px 20px;
+    background: #ddd;
+    color: #999;
+    font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-shadow: 0 0 1px #fff;
+    border-radius: 5px;
+}
+
+.topicListFooter a:hover {
+    background: #258fb8;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.topicListFooter .prev:before {
+    content: '\f053';
+    padding-right: 10px;
+    font-family: FontAwesome;
+}
+
+.topicListFooter .next:after {
+    content: '\f054';
+    padding-left: 10px;
+    font-family: FontAwesome;
+}
 
 /*文章标题样式开始*/
 
@@ -1016,7 +1091,9 @@ div.commentform textarea.comment_textarea {
     color: #E00000;
 }
 
-.postTitle a:link, .postTitle a:visited, .postTitle a:active {
+.postTitle a:link,
+.postTitle a:visited,
+.postTitle a:active {
     transition: all 0.4s linear 0s;
 }
 
@@ -1048,7 +1125,7 @@ div.commentform textarea.comment_textarea {
     background-clip: padding-box;
 }
 
-/*浏览器样式结束*/
+/*浏览器滚动条样式结束*/
 
 /*点赞样式开始*/
 
@@ -1094,13 +1171,14 @@ div.commentform textarea.comment_textarea {
 
 /*反对样式结束*/
 
-/*Monakai 代码样式开始*/
+/*Monokai 代码样式开始*/
 
 #cnblogs_post_body code {
     font-family: "Consolas", "KaiTi" !important;
 }
 
-.cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
+.cnblogs-markdown .hljs,
+.cnblogs-post-body .hljs {
     font-family: "Consolas", sans-serif !important;
     font-size: 16px !important;
     line-height: 1.5 !important;
@@ -1122,19 +1200,30 @@ pre {
     word-break: normal;
 }
 
-.hljs, .hljs-tag, .hljs-subst {
+.hljs,
+.hljs-tag,
+.hljs-subst {
     color: #f8f8f2;
 }
 
-.hljs-strong, .hljs-emphasis {
+.hljs-strong,
+.hljs-emphasis {
     color: #a8a8a2;
 }
 
-.hljs-bullet, .hljs-quote, .hljs-number, .hljs-regexp, .hljs-literal, .hljs-link {
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
     color: #ae81ff;
 }
 
-.hljs-code, .hljs-title, .hljs-section, .hljs-selector-class {
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
     color: #a6e22e;
 }
 
@@ -1146,27 +1235,43 @@ pre {
     font-style: italic;
 }
 
-.hljs-keyword, .hljs-selector-tag, .hljs-name, .hljs-attr {
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
     color: #f92672;
 }
 
-.hljs-symbol, .hljs-attribute {
+.hljs-symbol,
+.hljs-attribute {
     color: #66d9ef;
 }
 
-.hljs-params, .hljs-class .hljs-title {
+.hljs-params,
+.hljs-class .hljs-title {
     color: #f8f8f2;
 }
 
-.hljs-string, .hljs-type, .hljs-built_in, .hljs-builtin-name, .hljs-selector-id, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-addition, .hljs-variable, .hljs-template-variable {
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
     color: #e6db74;
 }
 
-.hljs-comment, .hljs-deletion, .hljs-meta {
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
     color: #F6AA11;
 }
 
-/*Monakai 代码样式结束*/
+/*Monokai 代码样式结束*/
 
 /*提交评论按钮样式开始*/
 
@@ -1193,12 +1298,19 @@ pre {
 
 /*评论区样式开始*/
 
-.user-avatar {
+img.user-avatar {
     position: absolute;
-    left: 10px;
-    top: 30px;
+    left: 15px;
+    top: 35px;
     width: 48px;
     height: 48px;
+    border-radius: 50%;
+    transition: all 500ms;
+}
+
+img.user-avatar:hover {
+    transform: rotate(360deg);
+    /*旋转用户头像*/
 }
 
 #blog-comments-placeholder {
@@ -1406,7 +1518,8 @@ div#comments_pager_top {
     bottom: 0
 }
 
-#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top, #sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-bottom {
+#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-top,
+#sideCatalog #sideCatalog-sidebar .sideCatalog-sidebar-bottom {
     background: url(https://img2020.cnblogs.com/blog/1937713/202004/1937713-20200424152027677-1354206005.png) no-repeat scroll 0 -199px transparent;
     height: 10px;
     left: -5px;
@@ -1573,30 +1686,38 @@ div#comments_pager_top {
         fill: #fff !important;
         color: #222 !important;
     }
+
     .github-corner .github-corner:hover .octo-arm {
         animation: none;
     }
+
     .github-corner .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
     }
 }
 
 @-moz-keyframes octocat-wave {
-    0%, 100% {
+
+    0%,
+    100% {
         -webkit-transform: rotate(0);
         -moz-transform: rotate(0);
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0);
     }
-    20%, 60% {
+
+    20%,
+    60% {
         -webkit-transform: rotate(-25deg);
         -moz-transform: rotate(-25deg);
         -ms-transform: rotate(-25deg);
         -o-transform: rotate(-25deg);
         transform: rotate(-25deg);
     }
-    40%, 80% {
+
+    40%,
+    80% {
         -webkit-transform: rotate(10deg);
         -moz-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
@@ -1606,21 +1727,27 @@ div#comments_pager_top {
 }
 
 @-webkit-keyframes octocat-wave {
-    0%, 100% {
+
+    0%,
+    100% {
         -webkit-transform: rotate(0);
         -moz-transform: rotate(0);
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0);
     }
-    20%, 60% {
+
+    20%,
+    60% {
         -webkit-transform: rotate(-25deg);
         -moz-transform: rotate(-25deg);
         -ms-transform: rotate(-25deg);
         -o-transform: rotate(-25deg);
         transform: rotate(-25deg);
     }
-    40%, 80% {
+
+    40%,
+    80% {
         -webkit-transform: rotate(10deg);
         -moz-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
@@ -1630,21 +1757,27 @@ div#comments_pager_top {
 }
 
 @-o-keyframes octocat-wave {
-    0%, 100% {
+
+    0%,
+    100% {
         -webkit-transform: rotate(0);
         -moz-transform: rotate(0);
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0);
     }
-    20%, 60% {
+
+    20%,
+    60% {
         -webkit-transform: rotate(-25deg);
         -moz-transform: rotate(-25deg);
         -ms-transform: rotate(-25deg);
         -o-transform: rotate(-25deg);
         transform: rotate(-25deg);
     }
-    40%, 80% {
+
+    40%,
+    80% {
         -webkit-transform: rotate(10deg);
         -moz-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
@@ -1654,21 +1787,27 @@ div#comments_pager_top {
 }
 
 @keyframes octocat-wave {
-    0%, 100% {
+
+    0%,
+    100% {
         -webkit-transform: rotate(0);
         -moz-transform: rotate(0);
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0);
     }
-    20%, 60% {
+
+    20%,
+    60% {
         -webkit-transform: rotate(-25deg);
         -moz-transform: rotate(-25deg);
         -ms-transform: rotate(-25deg);
         -o-transform: rotate(-25deg);
         transform: rotate(-25deg);
     }
-    40%, 80% {
+
+    40%,
+    80% {
         -webkit-transform: rotate(10deg);
         -moz-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
